@@ -18,7 +18,7 @@ public class ej04DigitosIguales {
         int casoBase, numEvaluado;
         casoBase = Integer.toString(numero).charAt(0);
         numEvaluado = Integer.toString(numero).charAt(posicion);
-
+        //Caso base: el primer digito del numero que se compara con los demas.
         if (casoBase == numEvaluado) {
             igualdad = true;
             if (posicion > 0 && igualdad) {

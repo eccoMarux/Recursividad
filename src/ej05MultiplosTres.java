@@ -14,6 +14,7 @@ public class ej05MultiplosTres {
         int acumulador = 0, contadorAux = 0;
         int digitoEvaluado;
         digitoEvaluado = numero % 10;
+        //Caso base: el numero sea cero. En ese caso retorna cero y suma todos los contadores auxiliares.
         if (numero > 0) {
             if (digitoEvaluado % 3 == 0) {
                 contadorAux++;

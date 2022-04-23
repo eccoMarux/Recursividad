@@ -21,6 +21,7 @@ public class ej08Palindromo {
         int limite;
         limite = oracion.length() / 2;
         if (oracion.charAt(inicio) == oracion.charAt(fin)) {
+            //Caso base: palindromo. En caso de que palindromo sea falso, se corta la recursividad y retorna falso.
             palindromo = true;
             if (palindromo && inicio < limite && fin > limite) {
                 evaluacion = esPalindromo(oracion, inicio + 1, fin - 1);

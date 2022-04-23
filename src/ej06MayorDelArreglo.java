@@ -6,7 +6,7 @@ public class ej06MayorDelArreglo {
         cargarRandom(arreglo);
         leerArreglo(arreglo);
         System.out.println("\nEl mayor valor del arreglo es: " + valorMaximo(arreglo, 0));
-        System.out.println("El menor valor del arreglo es: " + valorMinimo(arreglo, 0));
+        //System.out.println("El menor valor del arreglo es: " + valorMinimo(arreglo, 0));
     }
 
     public static void cargarRandom(int[] arreglo) {
@@ -28,6 +28,7 @@ public class ej06MayorDelArreglo {
 
     public static int valorMaximo(int[] arreglo, int posicion) {
         int valor = 0, auxiliar, valorEvaluado;
+        //Caso base:el arreglo en la ultima posicion. A partir de él se evaluan los otros numeros.
         if (posicion < arreglo.length - 1) {
             auxiliar = valorMaximo(arreglo, posicion + 1);
             valorEvaluado = arreglo[posicion];
@@ -42,6 +43,7 @@ public class ej06MayorDelArreglo {
         return valor;
     }
 
+    /*
     public static int valorMinimo(int[] arreglo, int posicion) {
         int valor = 0, auxiliar, valorEvaluado;
         if (posicion < arreglo.length - 1) {
@@ -57,4 +59,5 @@ public class ej06MayorDelArreglo {
         }
         return valor;
     }
+    */
 }
