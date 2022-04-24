@@ -10,15 +10,6 @@ public class ej07sumaMatriz {
         leerArreglo1D(resultado); 
     }
 
-    public static void cargarRandom(int[][] arreglo) {
-        int i, j;
-        for (i = 0; i < arreglo.length; i++) {
-            for (j = 0; j < arreglo[0].length; j++) {
-                arreglo[i][j] = new Random().nextInt(10);
-            }
-        }
-    }
-
     public static void leerArreglo2D(int[][] arreglo) {
         int i, j ;
         System.out.print("Matriz: \n");
@@ -42,17 +33,28 @@ public class ej07sumaMatriz {
     public static int sumarFilas(int[][] matriz, int filas, int columnas, int[] resultado) {
         int suma=0;
         if(columnas == 0){
-            suma = matriz[filas-1][columnas];
+            suma = matriz[filas][columnas];
+        }elseif(filas > 0){
+            suma = sumarFilas(matriz, filas-1, columnas, resultado);
         }else{
             if(filas>0){
                 columnas--;
                 if(columnas>=-1){
-                    suma = matriz[filas-1][columnas] + sumarFilas(matriz, filas, columnas-1, resultado);
-                    resultado[filas-1] = suma;
-                    //volver a iterar con una fila mas arriba  
+                    filas--;
+                    suma = matriz[filas][columnas] + sumarFilas(matriz, filas, columnas-1, resultado);
+                    resultado[filas] = suma;
                 }
             }
         }
         return suma;
+    }
+
+    public static void cargarRandom(int[][] arreglo) {
+        int i, j;
+        for (i = 0; i < arreglo.length; i++) {
+            for (j = 0; j < arreglo[0].length; j++) {
+                arreglo[i][j] = new Random().nextInt(10);
+            }
+        }
     }
 }
