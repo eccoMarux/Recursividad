@@ -1,0 +1,77 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej01Suma",
+            "request": "launch",
+            "mainClass": "ej01Suma",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej02DevuelveNumero",
+            "request": "launch",
+            "mainClass": "ej02DevuelveNumero",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej03InvierteCadena",
+            "request": "launch",
+            "mainClass": "ej03InvierteCadena",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej04DigitosIguales",
+            "request": "launch",
+            "mainClass": "ej04DigitosIguales",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej05MultiplosTres",
+            "request": "launch",
+            "mainClass": "ej05MultiplosTres",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej06MayorDelArreglo",
+            "request": "launch",
+            "mainClass": "ej06MayorDelArreglo",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej07sumaMatriz",
+            "request": "launch",
+            "mainClass": "ej07sumaMatriz",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej08Palindromo",
+            "request": "launch",
+            "mainClass": "ej08Palindromo",
+            "projectName": "Recursividad_f99089ee"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej09DivisionResta",
+            "request": "launch",
+            "mainClass": "ej09DivisionResta",
+            "projectName": "Recursividad_f99089ee"
+        }
+    ]
+}

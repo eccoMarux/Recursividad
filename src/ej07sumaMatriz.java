@@ -1,23 +1,24 @@
 import java.util.Random;
+
 public class ej07sumaMatriz {
     public static void main(String[] args) {
-        int[][] matriz ={{1,1},{2,2},{3,3}};
-        //int[][] matriz = new int[3][2];
-        //cargarRandom(matriz);
+        int[][] matriz = { { 1, 1 }, { 2, 2 }, { 3, 3 } };
+        // int[][] matriz = new int[3][2];
+        // cargarRandom(matriz);
         int[] resultado = new int[3];
         leerArreglo2D(matriz);
         sumarFilas(matriz, 3, 2, resultado);
-        leerArreglo1D(resultado); 
+        leerArreglo1D(resultado);
     }
 
     public static void leerArreglo2D(int[][] arreglo) {
-        int i, j ;
+        int i, j;
         System.out.print("Matriz: \n");
         for (i = 0; i < arreglo.length; i++) {
-            for (j= 0; j < arreglo[0].length; j++) {
+            for (j = 0; j < arreglo[0].length; j++) {
                 System.out.print(arreglo[i][j] + " ");
             }
-           System.out.println();
+            System.out.println();
         }
     }
 
@@ -31,21 +32,25 @@ public class ej07sumaMatriz {
     }
 
     public static int sumarFilas(int[][] matriz, int filas, int columnas, int[] resultado) {
-        int suma=0;
-        if(columnas == 0){
-            suma = matriz[filas][columnas];
-        }elseif(filas > 0){
-            suma = sumarFilas(matriz, filas-1, columnas, resultado);
-        }else{
-            if(filas>0){
-                columnas--;
-                if(columnas>=-1){
+        int suma = 0;
+        boolean continuar=false;
+        if (filas >= 0) {
+            if (columnas == 0) {
+                suma = matriz[filas][columnas];
+                continuar=true;
+            }
+            columnas--;
+            if (columnas >= 0) {
+                suma = matriz[filas-1][columnas] + sumarFilas(matriz, filas-1, columnas - 1, resultado);
+                resultado[filas-1] = suma;
+                if(continuar){
                     filas--;
-                    suma = matriz[filas][columnas] + sumarFilas(matriz, filas, columnas-1, resultado);
-                    resultado[filas] = suma;
+                    suma = matriz[filas-1][columnas] + sumarFilas(matriz, filas-1, columnas - 1, resultado);
+                    resultado[filas-1] = suma;
                 }
             }
         }
+
         return suma;
     }
 
