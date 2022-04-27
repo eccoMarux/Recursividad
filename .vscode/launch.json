@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ej11SumaParImpar",
+            "request": "launch",
+            "mainClass": "ej11SumaParImpar",
+            "projectName": "Recursividad_fcc9e888"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej07sumaMatriz",
+            "request": "launch",
+            "mainClass": "ej07sumaMatriz",
+            "projectName": "Recursividad_fcc9e888"
+        },
+        {
+            "type": "java",
+            "name": "Launch leerMatrizRecursivas",
+            "request": "launch",
+            "mainClass": "leerMatrizRecursivas",
+            "projectName": "Recursividad_fcc9e888"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

@@ -2,13 +2,19 @@ import java.util.Random;
 
 public class ej07sumaMatriz {
     public static void main(String[] args) {
-        int[][] matriz = { { 1, 1 }, { 2, 2 }, { 3, 3 } };
-        // int[][] matriz = new int[3][2];
-        // cargarRandom(matriz);
-        int[] resultado = new int[3];
+        int[][] matriz = new int[3][2];
+        cargarRandom(matriz);
         leerArreglo2D(matriz);
-        sumarFilas(matriz, 3, 2, resultado);
-        leerArreglo1D(resultado);
+        mostrarSumaPorFila(matriz, 0);
+    }
+
+    public static void cargarRandom(int[][] arreglo) {
+        int i, j;
+        for (i = 0; i < arreglo.length; i++) {
+            for (j = 0; j < arreglo[0].length; j++) {
+                arreglo[i][j] = new Random().nextInt(10);
+            }
+        }
     }
 
     public static void leerArreglo2D(int[][] arreglo) {
@@ -22,44 +28,22 @@ public class ej07sumaMatriz {
         }
     }
 
-    public static void leerArreglo1D(int[] arreglo) {
-        int i, longitudArreglo;
-        longitudArreglo = arreglo.length;
-        System.out.print("Resultado de la suma de cada fila: \n");
-        for (i = 0; i < longitudArreglo; i++) {
-            System.out.print(arreglo[i] + " ");
+    public static int sumarFila(int[][] matriz, int variacionDeFila, int ultimaPosicionCol ) {
+        int suma;
+        if(ultimaPosicionCol == 0){
+            suma=matriz[variacionDeFila][ultimaPosicionCol];
+        }else{
+            suma = matriz[variacionDeFila][ultimaPosicionCol] + sumarFila(matriz, variacionDeFila, ultimaPosicionCol-1);
         }
-    }
-
-    public static int sumarFilas(int[][] matriz, int filas, int columnas, int[] resultado) {
-        int suma = 0;
-        boolean continuar=false;
-        if (filas >= 0) {
-            if (columnas == 0) {
-                suma = matriz[filas][columnas];
-                continuar=true;
-            }
-            columnas--;
-            if (columnas >= 0) {
-                suma = matriz[filas-1][columnas] + sumarFilas(matriz, filas-1, columnas - 1, resultado);
-                resultado[filas-1] = suma;
-                if(continuar){
-                    filas--;
-                    suma = matriz[filas-1][columnas] + sumarFilas(matriz, filas-1, columnas - 1, resultado);
-                    resultado[filas-1] = suma;
-                }
-            }
-        }
-
         return suma;
     }
 
-    public static void cargarRandom(int[][] arreglo) {
-        int i, j;
-        for (i = 0; i < arreglo.length; i++) {
-            for (j = 0; j < arreglo[0].length; j++) {
-                arreglo[i][j] = new Random().nextInt(10);
-            }
+    public static void mostrarSumaPorFila(int[][]matriz, int fila){
+        if (fila < matriz.length) {
+            System.out.println(sumarFila(matriz, fila, matriz[0].length-1));
+            mostrarSumaPorFila(matriz, fila+1);
         }
     }
+
+
 }
