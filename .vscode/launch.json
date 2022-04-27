@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ej19PiramideDoble",
+            "request": "launch",
+            "mainClass": "ej19PiramideDoble",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
             "name": "Launch ej18Bomba",
             "request": "launch",
             "mainClass": "ej18Bomba",
