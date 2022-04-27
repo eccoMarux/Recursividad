@@ -1,11 +1,11 @@
 import java.util.Random;
 
-public class ej07sumaMatriz {
+public class ej14SumaColumnaMatriz {
     public static void main(String[] args) {
         int[][] matriz = new int[3][3];
         cargarRandom(matriz);
         leerArreglo2D(matriz);
-        mostrarSumaPorFila(matriz, 0);
+        mostrarSumaPorColumnas(matriz, 0);
     }
 
     public static void cargarRandom(int[][] arreglo) {
@@ -28,22 +28,20 @@ public class ej07sumaMatriz {
         }
     }
 
-    public static int sumarFila(int[][] matriz, int variacionDeFila, int ultimaPosicionCol ) {
+    public static int sumarColumna(int[][] matriz, int ultimaPosicionFila, int variacionDeColumna ) {
         int suma;
-        if(ultimaPosicionCol == 0){
-            suma=matriz[variacionDeFila][ultimaPosicionCol];
+        if(ultimaPosicionFila == 0){
+            suma=matriz[ultimaPosicionFila][variacionDeColumna];
         }else{
-            suma = matriz[variacionDeFila][ultimaPosicionCol] + sumarFila(matriz, variacionDeFila, ultimaPosicionCol-1);
+            suma = matriz[ultimaPosicionFila][variacionDeColumna] + sumarColumna(matriz, ultimaPosicionFila-1, variacionDeColumna);
         }
         return suma;
     }
 
-    public static void mostrarSumaPorFila(int[][]matriz, int fila){
-        if (fila < matriz.length) {
-            System.out.println("Suma de valores de fila "+(fila+1)+": "+sumarFila(matriz, fila, matriz[0].length-1));
-            mostrarSumaPorFila(matriz, fila+1);
+    public static void mostrarSumaPorColumnas(int[][]matriz, int columna){
+        if (columna < matriz[0].length) {
+            System.out.println("La suma de la columna "+(columna+1)+" es: "+sumarColumna(matriz, matriz.length-1, columna));
+            mostrarSumaPorColumnas(matriz, columna+1);
         }
     }
-
-
 }

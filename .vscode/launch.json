@@ -6,6 +6,55 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ej18Bomba",
+            "request": "launch",
+            "mainClass": "ej18Bomba",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej17PiramideDeNumeros",
+            "request": "launch",
+            "mainClass": "ej17PiramideDeNumeros",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej15VocalesEnCadena",
+            "request": "launch",
+            "mainClass": "ej15VocalesEnCadena",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej12BuscarCaracter",
+            "request": "launch",
+            "mainClass": "ej12BuscarCaracter",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej13MayorDeMatriz",
+            "request": "launch",
+            "mainClass": "ej13MayorDeMatriz",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej14SumaColumnaMatriz",
+            "request": "launch",
+            "mainClass": "ej14SumaColumnaMatriz",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej07sumaMatriz",
+            "request": "launch",
+            "mainClass": "ej07sumaMatriz",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
             "name": "Launch ej11SumaParImpar",
             "request": "launch",
             "mainClass": "ej11SumaParImpar",
