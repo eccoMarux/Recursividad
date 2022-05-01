@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ej02DevuelveNumero",
+            "request": "launch",
+            "mainClass": "ej02DevuelveNumero",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ej01Suma",
+            "request": "launch",
+            "mainClass": "ej01Suma",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
+            "name": "Launch ejClaseLeerRecursicamente",
+            "request": "launch",
+            "mainClass": "ejClaseLeerRecursicamente",
+            "projectName": "Recursividad_51b047d8"
+        },
+        {
+            "type": "java",
             "name": "Launch ej19PiramideDoble",
             "request": "launch",
             "mainClass": "ej19PiramideDoble",

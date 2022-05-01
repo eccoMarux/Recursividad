@@ -5,22 +5,32 @@ public class ej19PiramideDoble {
         int numero;
         System.out.println("Ingrese el tamaño de Piramide que desea: ");
         numero = sc.nextInt();
-        piramide(numero);
-        sc.close();
+        piramide(numero, 0);
+        sc.close();  
+        
     }
 
-
-    public static void piramide(int cantRepeticiones) {
+    public static void piramide(int numeroCentral, int espacioBase) {
         // Caso Base
-        if (cantRepeticiones == 1) {
-            System.out.print(cantRepeticiones);
+        if (numeroCentral == 1) {
+            agregaEspacios(espacioBase);
+            System.out.print(numeroCentral);
         } else {
             // El orden de los factores altera al producto.
             // Si quiero una piramide al revez, coloco la recursiva en ultima posicion.   
-            piramide(cantRepeticiones - 1);
+            piramide(numeroCentral - 1, espacioBase+2);
             System.out.println();
-            imprimeSumaDeUno(cantRepeticiones, 1);
-            imprimeRestaDeUno(cantRepeticiones);
+            agregaEspacios(espacioBase); 
+            imprimeSumaDeUno(numeroCentral, 1);
+            imprimeRestaDeUno(numeroCentral);
+             
+        }
+    }
+
+    public static void imprimeSumaDeUno(int numero, int inicio) {
+        if (inicio < numero) {
+            System.out.print((inicio) + " ");
+            imprimeSumaDeUno(numero, inicio+1);
         }
     }
 
@@ -31,10 +41,10 @@ public class ej19PiramideDoble {
         }
     }
 
-    public static void imprimeSumaDeUno(int numero, int inicio) {
-        if (inicio < numero) {
-            System.out.print((inicio) + " ");
-            imprimeSumaDeUno(numero, inicio+1);
+    public static void agregaEspacios(int numero){
+        if(numero>=1){
+            System.out.print(" ");
+            agregaEspacios(numero-1);
         }
     }
 }

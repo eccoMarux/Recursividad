@@ -15,7 +15,5 @@ public class ejClaseLeerRecursicamente {
             System.out.print(" | " + mat[fil][col] + " | ");
             mostrarRecMatriz(mat, fil, col + 1);
         }
-    }
-
-    
+    }    
 }
